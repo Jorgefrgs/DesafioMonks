@@ -36,7 +36,7 @@ uvicorn app.main:app --reload
 
 cd .\DesafioMonks\front\spotfy-page\
 
-npm install react
+npm i
 
 npm run dev
 
