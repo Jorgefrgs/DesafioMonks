@@ -10,6 +10,13 @@
 <!-- Imagem ajustada -->
 <img src="https://github.com/user-attachments/assets/042976f3-15b9-4d96-ab42-c950ae64eeb2" alt="Imagem 3" width="300"/>
 
+<!-- Imagem ajustada -->
+<img src="https://github.com/user-attachments/assets/2a121b80-9626-43dc-aac7-e45516ca3ad6" alt="Imagem 4" width="300"/>
+
+<!-- Imagem ajustada -->
+<img src="https://github.com/user-attachments/assets/16ff7abc-a0bb-49ba-8c94-75efe59bb12a" alt="Imagem 4" width="300"/>
+
+
 # Requisitos e Setup 💻
 
 ## Instalação
