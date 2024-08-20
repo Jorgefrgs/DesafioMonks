@@ -1,4 +1,4 @@
-# Desafio Monks 
+# Desafio Monks 👽
 ## FastAPI, React e Spotify Integration 🎵
 
 <!-- Imagem ajustada -->
