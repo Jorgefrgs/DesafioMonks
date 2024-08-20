@@ -1,0 +1,33 @@
+
+.App {
+  text-align: center;
+  position: relative; 
+}
+
+.App-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 100px;
+  max-width: 100%; 
+  object-fit: contain; 
+}
+
+
+@media (max-width: 768px) {
+  .App-logo {
+    height: 40px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .App-logo {
+    height: 30px; 
+  }
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  padding: 5px;
+  text-align: center;
+}

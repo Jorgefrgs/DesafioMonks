@@ -1,0 +1,99 @@
+/* card.module.css */
+.container {
+  padding: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px #5630b1;
+}
+
+.artistImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.artistDetails {
+  padding: 15px;
+}
+
+.artistName {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.artistFollowers,
+.artistPopularity,
+.artistGenre {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.genreCard {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  margin: 10px auto;
+  padding: 15px;
+  text-align: center;
+}
+
+.genreCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px #5630b1;
+}
+
+.genreCard h2 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.genreDetails {
+  padding: 10px;
+}
+
+.genreRankingContent {
+  list-style: none;
+  padding: 0;
+}
+
+.genreRankingContent li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 5px;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.genreRankingContent li:hover {
+  color: #5630b1; 
+  transform: scale(1.05); 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); 
+}
