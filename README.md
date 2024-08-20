@@ -55,7 +55,7 @@ Resposta:
 
 ![image](https://github.com/user-attachments/assets/3b3e1895-f9ab-48ed-9128-1840277e1e85)
 
-Para testar: 127.0.0.1:5051/docs
+Para testar: 127.0.0.1:8000/docs
 
 Função get_token(client_id, client_secret): Obtém o token de acesso do Spotify.
 Função get_artist_data(token, artist_ids): Obtém dados dos artistas com base nos IDs fornecidos.
