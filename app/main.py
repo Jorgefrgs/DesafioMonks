@@ -1,11 +1,7 @@
 import uvicorn
-from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers.spotfy_router import router
-
-
-load_dotenv(dotenv_path='C:/Users/jorge/my-workspace/MonksDesafio/.env')
 
 
 app = FastAPI()

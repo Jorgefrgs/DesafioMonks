@@ -1,7 +1,5 @@
 from typing import List, Dict
-
 from pydantic import BaseModel
-
 
 class PostData(BaseModel):
     github_url: str

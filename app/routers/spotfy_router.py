@@ -1,8 +1,6 @@
-import os
 
 import requests
-from fastapi import APIRouter, HTTPException
-
+from fastapi import APIRouter, HTTPException, Depends
 from app.models.post_model import PostData
 from app.services.spotfy_services import get_token, get_artist_data, create_rankings
 
@@ -13,9 +11,6 @@ router = APIRouter()
 async def get_rankings():
     client_id= "c8336bb12c47484fa782901457077174"
     client_secret= "91b49c3bddb2404584a8554be861dc42"
-
-    
-
 
     if not client_id or not client_secret:
         raise HTTPException(status_code=500, detail="CLIENT_ID e CLIENT_SECRET não encontrados.")
@@ -37,10 +32,25 @@ async def get_rankings():
 
 
 @router.post("/submit")
-async def submit_data(data: PostData):
+async def submit_data(rankings: dict = Depends(get_rankings)):
+    pop_rankings = rankings["pop_ranking"]
+    genre_rankings = rankings["genre_ranking"]
+
+    post_data = {
+        "github_url": "https://github.com/Jorgefrgs/DesafioMonks.git",
+        "name": "Jorge Ferreira",
+        "pop_ranking": [
+            {"artist_name": artist["name"], "followers": artist["followers"]}
+            for artist in pop_rankings
+        ],
+        "genre_ranking": genre_rankings
+    }
+
     url = "https://psel-solution-automation-cf-ubqz773kaq-uc.a.run.app?access_token=bC2lWA5c7mt1rSPR"
     headers = {"Content-Type": "application/json"}
-    response = requests.post(url, headers=headers, json=data.dict())
+    response = requests.post(url, headers=headers, json=post_data)
+
     if response.status_code != 200:
         raise HTTPException(status_code=response.status_code, detail=response.text)
+
     return {"mensagem": "Dados adicionados com sucesso"}
